@@ -1,0 +1,37 @@
+.section-ciekawostki {
+    @include center;
+  height: 100vh;
+  width: 100vw;
+  background-color: none;
+
+  &__container {
+    @include center;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    height: 70%;
+    box-shadow: 0 4px 8px $color2;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  &__image {
+    max-width: 90%;
+    max-height: 60%;
+    object-fit: contain;
+    margin-bottom: 1em;
+  }
+
+  &__link {
+    font-size: 1.2em;
+    color: #00cc99;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007f60;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// https://sass-lang.com/
+// -------------------------------------------
+@import "./StyleGenral/reset";
+@import "./StyleGenral/values";
+@import "./StyleGenral/mixin";
+@import "./StyleGenral/body";
+@import "./StyleGenral/aplay_to_all";
+// -------------------------------------------
+@import "./StyleIndex/_section_shop";
+@import "./StyleIndex/koszyk";
+@import "./StyleIndex/produkty";
+@import "./StyleIndex/header";
+@import "./StyleIndex/secton-ciekawostki"
+// ----------------------------------------------

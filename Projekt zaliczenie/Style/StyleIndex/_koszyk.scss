@@ -1,0 +1,117 @@
+
+// Przyciski
+.buy-button {
+  position: absolute; 
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 10; 
+  font-size: $font-size-base;
+  font-weight: bold;
+  color: $text-color;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Stylizacja koszyka
+#cart-items {
+    @include center;
+  flex-direction: column;
+  gap: 20px; 
+  margin: 20px 0; 
+  padding: 0;
+  width: 100%;
+}
+
+// Stylizacja itemu koszyka
+.cart-item {
+  display: flex;
+  align-items: center; 
+  background-color: $text-color;
+  border-radius: 8px;
+  box-shadow: $shadow-light;
+  padding: 15px;
+  width: 100%; 
+  max-width: 400px;
+  border: none;
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+
+  span {
+    flex-grow: 1;
+    font-size: $font-size-large;
+    color: #333;
+    text-align: center; 
+  }
+}
+
+// Przycisk usuwania produktu
+.remove-button {
+  background-color: $remove-btn-color;
+  color: $text-color;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $remove-btn-hover;
+  }
+}
+
+// Przycisk czyszczenia koszyka
+#clear-cart {
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: $text-color;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto; 
+  width: 200px; 
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Komunikat o pustym koszyku
+.cart-message {
+  position: fixed;  
+  bottom: 20px;  
+  right: 20px;   
+  background-color: $cart-message-bg;
+  color: $text-color;
+  padding: 15px 25px;  
+  border-radius: 10px;  
+  font-size: 16px;  
+  box-shadow: $shadow-deep;  
+  display: none;  
+  z-index: 9999;  
+  opacity: 0;  
+  transition: opacity 0.5s ease-in-out;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+}

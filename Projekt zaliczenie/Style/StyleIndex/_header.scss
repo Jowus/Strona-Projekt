@@ -1,0 +1,103 @@
+.header {
+  width: 100vw;
+  background-color: #00cc99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 0 2em;
+  height: 10vh;
+  z-index: 10;
+
+  &--div {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  &__menu {
+    box-shadow: inset 0px 1px 5px -50px #efdcfb;
+    background: linear-gradient(to bottom, $color5 5%, color6 100%);
+    background-color: $color5;
+    border-radius: 9px;
+    border: 2px solid $color4;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 26px;
+    text-decoration: none;
+    text-shadow: 1px 0px 0px #9752cc;
+    margin-left: auto;
+    position: relative; /* Dodanie pozycjonowania */
+    z-index: 20;
+
+    &:hover {
+      background: linear-gradient(to bottom, color6 5%, $color5 100%);
+      background-color: $color6;
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  &__menu--open {
+    width: 550px;
+    height: auto;
+    background-color: rgb(154, 226, 192);
+    border: 0.7em solid #996699;
+    display: none;
+    z-index: 100; /* Zwiększono z-index, aby menu było nad innymi elementami */
+    flex-wrap: wrap;
+    position: fixed; /* Użycie fixed, aby menu było na stałe na ekranie */
+    top: 15vh;
+    padding: 3em;
+
+    ul {
+        @include center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 8vh;
+
+      li {
+        border-bottom: 2px solid rgb(255, 255, 255);
+
+        button {
+          box-shadow: inset 0px 1px 5px -50px #ffffff;
+          background: linear-gradient(to bottom, $color7 5%, $color3 100%);
+          background-color: $color7;
+          border-radius: 9px;
+          border: 2px solid #0a661f;
+          display: inline-block;
+          cursor: pointer;
+          color: #ffffff;
+          font-family: Arial;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 8px 26px;
+          text-decoration: none;
+          text-shadow: 1px 0px 0px $color7;
+
+          &:hover {
+            background: linear-gradient(to bottom, $color3 5%, $color7 100%);
+            background-color: $color3;
+          }
+
+          &:active {
+            background: linear-gradient(to bottom, $color3 5%, $color7 100%);
+            background-color: $color3;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 2em;
+    }
+  }
+}
